@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact BAM Studios — send a message or reach out directly.">
+  <title>Contact — BAM Studios</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="word-3.svg">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo" aria-label="BAM Studios home">
+        <svg viewBox="0 0 640 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <text x="20" y="98" font-family="Georgia, 'Times New Roman', serif" font-size="80" font-weight="bold" fill="#d97706">BAM</text>
+          <text x="245" y="98" font-family="Georgia, 'Times New Roman', serif" font-size="80" font-style="italic" fill="#059669">Studios</text>
+          <circle cx="555" cy="88" r="9" fill="#d97706"/>
+        </svg>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <section>
+      <h1 class="section-title text-center">Get in Touch</h1>
+      <p class="section-subtitle text-center">
+        Questions, ideas, or feedback — we'd love to hear from you.
+      </p>
+    </section>
+
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! The form is currently a demo — please email us directly for now.');">
+
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Ahmed Khan" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="What would you like to ask or share?" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+
+    </form>
+
+    <p class="contact-email">
+      Or reach us directly at <a href="mailto:bamstudio.Dev@gmail.com">bamstudio.Dev@gmail.com</a>
+    </p>
+
+    <p class="contact-email" style="font-size: 12px; margin-top: 8px;">
+      Note: The form above is a demo and does not submit yet. Direct email is the fastest way to reach us.
+    </p>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2026 <strong>BAM Studios</strong> — Craft. Ship. Serve.</p>
+    <p>Contact: <a href="contact.html">Send a message</a></p>
+  </footer>
+
+</body>
+</html>

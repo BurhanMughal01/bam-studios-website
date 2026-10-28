@@ -10,9 +10,14 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
     <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
       <a href="index.html" class="logo" aria-label="BAM Studios home">
         <svg viewBox="0 0 640 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <text x="20" y="98" font-family="Georgia, 'Times New Roman', serif" font-size="80" font-weight="bold" fill="#d97706">BAM</text>
@@ -20,83 +25,227 @@
           <circle cx="555" cy="88" r="9" fill="#d97706"/>
         </svg>
       </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html" class="active">Products</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
     </nav>
   </header>
 
-  <!-- MAIN -->
   <main>
 
-    <section>
-      <h1 class="section-title text-center">Our Products</h1>
-      <p class="section-subtitle text-center">
-        Every product is built with security, Halal principles, and quality first.
+    <!-- HERO -->
+    <section class="products-hero">
+      <h1>
+        Tools Built for <span class="accent-emerald">Purpose</span>
+        and <span class="accent-gold">Principle</span>.
+      </h1>
+      <p>
+        Every product we ship is grounded in Halal principles, security-first
+        engineering, and real value for developers and the Ummah.
       </p>
     </section>
 
-    <div class="grid" style="margin-top: 40px;">
-
-      <!-- APKForge -->
-      <div class="card">
-        <span class="badge badge-live">Live</span>
-        <h3>APKForge</h3>
-        <p>
-          Convert any HTML file or website URL into a fully signed Android APK —
-          in minutes, without touching Android Studio.
-        </p>
-        <p style="color: var(--text); font-weight: 600; margin-bottom: 8px;">Key Features:</p>
-        <ul style="color: var(--text-muted); font-size: 14px; line-height: 1.9; padding-left: 20px; margin-bottom: 16px;">
-          <li>70+ Halal-ready templates</li>
-          <li>32 custom splash screen styles</li>
-          <li>Monaco code editor (multi-file support)</li>
-          <li>APK Package Mode (new / update)</li>
-          <li>Server-side Halal content validator</li>
-          <li>Email notifications (welcome / build)</li>
-        </ul>
-        <p style="color: var(--text); font-weight: 600; margin-bottom: 8px;">Tech Stack:</p>
-        <p style="font-size: 13px;">
-          HTML / CSS / JS · Cloudflare Workers · Supabase · GitHub Actions · Resend
-        </p>
-        <a href="https://apk-builder-eosin.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">
-          Open APKForge →
-        </a>
+    <!-- APKForge -->
+    <div class="product-showcase">
+      <div class="product-header">
+        <div class="product-icon">
+          <svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="8" y="8" width="32" height="32" rx="4"/>
+            <path d="M18 20 L12 26 L18 32"/>
+            <path d="M30 20 L36 26 L30 32"/>
+            <line x1="26" y1="18" x2="22" y2="34"/>
+          </svg>
+        </div>
+        <div class="product-title-area">
+          <span class="badge badge-live">Live</span>
+          <h2>APKForge</h2>
+          <div class="product-subtitle">HTML / URL → Android APK</div>
+        </div>
       </div>
 
-      <!-- BAM Coder -->
-      <div class="card">
-        <span class="badge badge-soon">Coming Soon</span>
-        <h3>BAM Coder</h3>
-        <p>
-          An AI coding assistant built with Islamic guardrails at its core.
-          Voice input, chat history, and a strict Halal filter — so you can
-          build what benefits, not what harms.
-        </p>
-        <p style="color: var(--text); font-weight: 600; margin-bottom: 8px;">Planned Features:</p>
-        <ul style="color: var(--text-muted); font-size: 14px; line-height: 1.9; padding-left: 20px; margin-bottom: 16px;">
-          <li>AI chat with Markdown + code blocks</li>
-          <li>Voice input and voice output</li>
-          <li>Chat history with sidebar</li>
-          <li>Built-in Halal content filter</li>
-          <li>Powered by Groq (high-speed inference)</li>
-        </ul>
-        <p style="color: var(--text); font-weight: 600; margin-bottom: 8px;">Status:</p>
-        <p style="font-size: 13px;">In development — launch updates coming.</p>
-        <a href="contact.html" class="btn btn-outline">Get Notified →</a>
+      <p class="product-desc">
+        Turn any HTML page or website URL into a fully signed Android APK in minutes.
+        No Android Studio, no complex setup — just paste, choose a template, and build.
+      </p>
+
+      <ul class="feature-list">
+        <li>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,10 8,14 16,6"/></svg>
+          70+ Halal-ready templates
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,10 8,14 16,6"/></svg>
+          32 custom splash screen styles
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,10 8,14 16,6"/></svg>
+          Monaco editor with multi-file support
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,10 8,14 16,6"/></svg>
+          APK Package Mode (new / update)
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,10 8,14 16,6"/></svg>
+          Server-side Halal content validator
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,10 8,14 16,6"/></svg>
+          Welcome &amp; build email notifications
+        </li>
+      </ul>
+
+      <div class="tech-stack">
+        <span class="tech-label">Built with</span>
+        <span class="tech-pill">HTML/CSS/JS</span>
+        <span class="tech-pill">Cloudflare Workers</span>
+        <span class="tech-pill">Supabase</span>
+        <span class="tech-pill">GitHub Actions</span>
+        <span class="tech-pill">Resend</span>
       </div>
 
+      <a href="https://apk-builder-eosin.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">
+        Open APKForge →
+      </a>
     </div>
+
+    <!-- BAM Coder -->
+    <div class="product-showcase">
+      <div class="product-header">
+        <div class="product-icon">
+          <svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="10" width="40" height="30" rx="3"/>
+            <line x1="4" y1="18" x2="44" y2="18"/>
+            <circle cx="10" cy="14" r="1.2" fill="currentColor"/>
+            <circle cx="16" cy="14" r="1.2" fill="currentColor"/>
+            <circle cx="22" cy="14" r="1.2" fill="currentColor"/>
+            <path d="M14 26 L18 30 L14 34"/>
+            <line x1="22" y1="34" x2="30" y2="34"/>
+          </svg>
+        </div>
+        <div class="product-title-area">
+          <span class="badge badge-soon">Coming Soon</span>
+          <h2>BAM Coder</h2>
+          <div class="product-subtitle">AI coding assistant with Islamic guardrails</div>
+        </div>
+      </div>
+
+      <p class="product-desc">
+        A coding assistant that respects your Deen. Real AI power, strict Halal filtering,
+        and voice support — designed to help you build what benefits, never what harms.
+      </p>
+
+      <ul class="feature-list">
+        <li>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,10 8,14 16,6"/></svg>
+          AI chat with Markdown &amp; code blocks
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,10 8,14 16,6"/></svg>
+          Voice input and voice output
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,10 8,14 16,6"/></svg>
+          Chat history with sidebar
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,10 8,14 16,6"/></svg>
+          Built-in strict Halal content filter
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,10 8,14 16,6"/></svg>
+          Powered by Groq (high-speed inference)
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4,10 8,14 16,6"/></svg>
+          Full Islamic content compliance
+        </li>
+      </ul>
+
+      <div class="tech-stack">
+        <span class="tech-label">Planned Stack</span>
+        <span class="tech-pill">Groq API</span>
+        <span class="tech-pill">Cloudflare Workers</span>
+        <span class="tech-pill">D1 Database</span>
+        <span class="tech-pill">Web Speech API</span>
+      </div>
+
+      <a href="contact.html" class="btn btn-outline">
+        Get Notified →
+      </a>
+    </div>
+
+    <!-- WHY OUR PRODUCTS -->
+    <section>
+      <h2 class="section-title text-center" style="margin-top: 56px;">Why These Products</h2>
+      <p class="section-subtitle text-center">What makes BAM Studios products different.</p>
+
+      <div class="why-products">
+
+        <div class="why-product">
+          <div class="why-icon">
+            <svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M24 4 L8 12 L8 24 C8 34 15 42 24 44 C33 42 40 34 40 24 L40 12 Z"/>
+              <polyline points="16,24 22,30 32,18"/>
+            </svg>
+          </div>
+          <h4>Halal by Design</h4>
+          <p>Every product ships with a strict Halal validator — no haram content slips through.</p>
+        </div>
+
+        <div class="why-product">
+          <div class="why-icon">
+            <svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="10" y="22" width="28" height="20" rx="3"/>
+              <path d="M16 22 V14 C16 9 20 6 24 6 C28 6 32 9 32 14 V22"/>
+              <circle cx="24" cy="32" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h4>Security First</h4>
+          <p>Row Level Security on every table. Strong auth. Privacy is non-negotiable.</p>
+        </div>
+
+        <div class="why-product">
+          <div class="why-icon">
+            <svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M24 4 L4 44 H44 Z"/>
+              <line x1="24" y1="18" x2="24" y2="28" stroke-width="2.5"/>
+              <circle cx="24" cy="35" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <h4>No Riba</h4>
+          <p>Zero interest, zero haram ads. Clean monetization only — earnings stay Halal.</p>
+        </div>
+
+      </div>
+    </section>
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>© 2026 <strong>BAM Studios</strong> — Craft. Ship. Serve.</p>
-    <p>Contact: <a href="contact.html">Send a message</a></p>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <svg class="footer-brand-logo" viewBox="0 0 640 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <text x="20" y="98" font-family="Georgia, 'Times New Roman', serif" font-size="80" font-weight="bold" fill="#d97706">BAM</text>
+          <text x="245" y="98" font-family="Georgia, 'Times New Roman', serif" font-size="80" font-style="italic" fill="#059669">Studios</text>
+          <circle cx="555" cy="88" r="9" fill="#d97706"/>
+        </svg>
+        <p>An independent software studio from Pakistan — building secure, Halal SaaS products with principle.</p>
+        <p style="margin-top: 12px;"><strong style="color: var(--text);">Craft. Ship. Serve.</strong></p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="https://apk-builder-eosin.vercel.app" target="_blank" rel="noopener">APKForge</a></li>
+          <li><a href="products.html">BAM Coder</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:bamstudio.Dev@gmail.com">bamstudio.Dev@gmail.com</a></li>
+          <li><a href="contact.html">Send a message</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 BAM Studios. All rights reserved.</div>
   </footer>
 
 </body>

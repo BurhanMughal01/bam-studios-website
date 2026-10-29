@@ -1852,3 +1852,34 @@ main {
 }
 
 /* ============ OG IMAGE (social share preview) ============ */
+
+/* ============ FORM STATUS MESSAGES ============ */
+.form-status {
+  display: none;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.55;
+  margin-bottom: 20px;
+  border-left: 4px solid;
+}
+
+.form-status-success {
+  display: block;
+  background: var(--emerald-light);
+  color: var(--emerald-dark);
+  border-left-color: var(--emerald);
+}
+
+.form-status-error {
+  display: block;
+  background: #fee2e2;
+  color: #991b1b;
+  border-left-color: #dc2626;
+}
+
+#submitBtn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}

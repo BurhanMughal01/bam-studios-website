@@ -30,7 +30,6 @@
 
   <main>
 
-    <!-- HERO -->
     <section class="contact-hero">
       <h1>
         Let's <span class="accent-emerald">Build</span>
@@ -42,7 +41,6 @@
       </p>
     </section>
 
-    <!-- CONTACT INFO CARDS -->
     <div class="contact-cards">
 
       <div class="contact-card">
@@ -80,7 +78,6 @@
 
     </div>
 
-    <!-- MAIN AREA: LEFT INFO + RIGHT FORM -->
     <div class="contact-main">
 
       <div class="contact-side">
@@ -109,7 +106,9 @@
         </ul>
       </div>
 
-      <form class="contact-form-v2" onsubmit="event.preventDefault(); alert('Thank you! The form is currently a demo — please email us directly at bamstudio.Dev@gmail.com for now.');">
+      <form id="contactForm" class="contact-form-v2" novalidate>
+
+        <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
 
         <div class="form-row">
           <div class="form-group">
@@ -142,7 +141,10 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message →</button>
+        <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">
+          <span id="btnText">Send Message →</span>
+          <span id="btnLoading" style="display: none;">Sending...</span>
+        </button>
 
       </form>
 
@@ -169,15 +171,80 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4>Company</h4>
         <ul>
-          <li><a href="mailto:bamstudio.Dev@gmail.com">bamstudio.Dev@gmail.com</a></li>
-          <li><a href="contact.html">Send a message</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">© 2026 BAM Studios. All rights reserved.</div>
   </footer>
+
+  <script>
+    const WORKER_URL = 'https://bam-studios-contact.buisch2314.workers.dev';
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnLoading = document.getElementById('btnLoading');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.className = 'form-status';
+      status.textContent = '';
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const topic = form.topic.value;
+      const message = form.message.value.trim();
+
+      if (!name || !email || !message) {
+        showStatus('error', 'Please fill in all required fields.');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      btnText.style.display = 'none';
+      btnLoading.style.display = 'inline';
+
+      try {
+        const res = await fetch(WORKER_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, topic, message }),
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.ok) {
+          showStatus('success', 'JazakAllah Khair! Your message has been sent. We will respond within 24–48 hours, In Sha Allah.');
+          form.reset();
+        } else {
+          showStatus('error', data.error || 'Something went wrong. Please try again or email us directly at bamstudio.Dev@gmail.com');
+        }
+      } catch (err) {
+        showStatus('error', 'Network error. Please check your connection or email us directly at bamstudio.Dev@gmail.com');
+      } finally {
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoading.style.display = 'none';
+      }
+    });
+
+    function showStatus(type, text) {
+      status.className = 'form-status form-status-' + type;
+      status.textContent = text;
+      status.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  </script>
 
 </body>
 </html>
